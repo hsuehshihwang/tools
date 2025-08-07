@@ -7,3 +7,7 @@ markmap:
 ---
 
 # stanley
+# 數學 math
+# 歷史 history
+# 公民 civilization
+# 地理 geometrics
