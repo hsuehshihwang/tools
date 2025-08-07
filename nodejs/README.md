@@ -9,5 +9,4 @@ markmap:
 # nodejs
 # nvm
 ## installation
-- link
-    - https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
+- [nvm-sh@github](https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script)
