@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+<title>Markmap</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-family: ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+#mindmap {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+}
+.markmap-dark {
+  background: #27272a;
+  color: white;
+}
+</style>
+<link rel="stylesheet" href="https://unpkg.com/markmap-toolbar@0.18.12/dist/style.css"><link rel="stylesheet" href="https://unpkg.com/@highlightjs/cdn-assets@11.11.1/styles/default.min.css">
+</head>
+<body>
+<svg id="mindmap"></svg>
+<script src="https://unpkg.com/d3@7.9.0/dist/d3.min.js"></script><script src="https://unpkg.com/markmap-view@0.18.12/dist/browser/index.js"></script><script src="https://unpkg.com/markmap-toolbar@0.18.12/dist/index.js"></script><script>((r) => {
+          setTimeout(r);
+        })(() => {
+  const { markmap, mm } = window;
+  const toolbar = new markmap.Toolbar();
+  toolbar.attach(mm);
+  const el = toolbar.render();
+  el.setAttribute("style", "position:absolute;bottom:20px;right:20px");
+  document.body.append(el);
+})</script><script>((getMarkmap, getOptions, root2, jsonOptions) => {
+              const markmap = getMarkmap();
+              window.mm = markmap.Markmap.create(
+                "svg#mindmap",
+                (getOptions || markmap.deriveOptions)(jsonOptions),
+                root2
+              );
+              if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                document.documentElement.classList.add("markmap-dark");
+              }
+            })(() => window.markmap,null,{"content":"","children":[{"content":"markmap","children":[],"payload":{"tag":"h1","lines":"8,9"}},{"content":"installation","children":[{"content":"nvm","children":[{"content":"<pre data-lines=\"11,16\"><code class=\"language-bash\">curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash\n<span class=\"hljs-built_in\">source</span> ~/.bashrc  <span class=\"hljs-comment\"># or ~/.zshrc</span>\nnvm install --lts\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"11,16"}}],"payload":{"tag":"h2","lines":"10,11"}},{"content":"markmap","children":[{"content":"<pre data-lines=\"17,20\"><code class=\"language-bash\">npm install -g markmap-cli\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"17,20"}}],"payload":{"tag":"h2","lines":"16,17"}},{"content":"example","children":[{"content":"example.md","children":[{"content":"<pre data-lines=\"22,31\"><code class=\"language-markdown\"><span class=\"hljs-section\"># My Mind Map</span>\n<span class=\"hljs-section\">## Section 1</span>\n<span class=\"hljs-bullet\">-</span> Item 1\n<span class=\"hljs-bullet\">-</span> Item 2\n<span class=\"hljs-section\">## Section 2</span>\n<span class=\"hljs-bullet\">-</span> Sub-item A\n<span class=\"hljs-bullet\">-</span> Sub-item B\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"22,31"}}],"payload":{"tag":"h3","lines":"21,22"}},{"content":"generate mymap.html","children":[{"content":"<pre data-lines=\"32,37\"><code class=\"language-bash\"><span class=\"hljs-comment\"># markmap example.md</span>\n<span class=\"hljs-comment\"># markmap example.md -o mymap.html</span>\nmarkmap --no-open example.md -o mymap.html\n</code></pre>","children":[],"payload":{"tag":"pre","lines":"32,37"}}],"payload":{"tag":"h3","lines":"31,32"}}],"payload":{"tag":"h2","lines":"20,21"}}],"payload":{"tag":"h1","lines":"9,10"}}]},{"color":["blue"],"initialExpandLevel":2})</script>
+</body>
+</html>
