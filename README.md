@@ -10,3 +10,4 @@ markmap:
 # [opensync](https://hsuehshihwang.github.io/tools/opensync)
 # [markmap](https://hsuehshihwang.github.io/tools/markmap)
 # [nodejs](https://hsuehshihwang.github.io/tools/nodejs)
+# [stanley](https://hsuehshihwang.github.io/tools/stanley)
