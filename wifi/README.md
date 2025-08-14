@@ -7,12 +7,24 @@ markmap:
 ---
 
 # wifi
+---
+# rfkill
+## list
+- `rfkill`
+## unblock
+- `rfkill unblock 1 -o SOFT`
+---
 # iw
 ## dev
 ## phy
 ## ap
 ## sta
+- `sudo iw phy phy0 interface add sta0 type station`
+- `sudo iw dev sta0 del`
 ## monitor
+- `sudo iw phy phy0 interface add mon0 type monitor`
+- `sudo iw dev mon0 del`
+---
 # wl
 ## cli
 ### vap
